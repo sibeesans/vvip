@@ -151,6 +151,7 @@ else
     status_ws="${RED}OFF${NC}"
 fi
 
+sshws_s="{GREEN}ON${NC}"
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
@@ -203,9 +204,8 @@ echo -e "  ${WHITE}Current Time        ${NC}${BIGreen}  : $( date -d "0 days" +"
 echo -e "  ${WHITE}Operating System    ${NC}${BIGreen}  : $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g')( $(uname -m))"
 echo -e "  ${WHITE}Domain VPS          ${NC}${BIGreen}  : $( cat /etc/xray/domain )"
 echo -e "  ${WHITE}Server IP           ${NC}${BIGreen}  : ${ipsaya}"
-echo -e "  ${WHITE}ISP-VPS             ${NC}${BIGreen}  : ${ISP}"
-echo -e "  ${WHITE}City                ${NC}${BIGreen}  : ${CITY}"
-echo -e "  ${WHITE}Ram                 ${NC}${BIGreen}  : ${uram}/${tram}GB"
+echo -e "  ${WHITE}ISP & CITY          ${NC}${BIGreen}  : ${ISP}"" & ${CITY}"
+echo -e "  ${WHITE}Ram                 ${NC}${BIGreen}  : ${uram} / ${tram}GB"
 echo -e "  ${WHITE}CPU USAGE           ${NC}${BIGreen}  : ${cpu_usage}"
 echo -e "  ${WHITE}Clients Name        ${NC}${BIYellow}  : $Name ${NC}"
 echo -e "  ${WHITE}Script Expired      ${NC}${BIYellow}  : $Exp (${NC}${BIGreen} $dayleft Days ${NC}${BIYellow})${NC}"
@@ -213,7 +213,7 @@ echo -e "  ${WHITE}Developer           ${NC}${BIYellow}  : FV STORE TUNNELING${N
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${CYAN}│${NC}${GARIS}                     << STATUS SERVICE >>                   ${NC}${CYAN}|${NC}"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "      ${BIGreen}[ SSH Websocket: ${status_ws} ]  ${BIGreen}[ NGINX: ${status_nginx} ] ${BIGreen}[ X-RAY : ${status_xray} ] "
+echo -e "      ${BIGreen}[ SSH Websocket: ${sshws_s} ${BIGreen}]  [ NGINX: ${status_nginx} ${BIGreen}] [ X-RAY : ${status_xray} ${BIGreen}] "
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${CYAN}│  \033[0m ${BOLD}${BIYellow}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $CYAN│"
 echo -e "${CYAN}│  \033[0m ${BIGreen} $ssh1        $vma           $vla          $tra               $ssa   $NC    $CYAN│"
