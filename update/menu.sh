@@ -196,7 +196,7 @@ fi
 }
 clear
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}│${NC}${GARIS}                      << INFORMASI VPS >>                    ${NC}${CYAN}|${NC}"
+echo -e "${CYAN}│${NC}${GARIS}                      << INFORMASI VPS >>                   ${NC}${CYAN}|${NC}"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "  ${WHITE}Sever Uptime        ${NC}${BIGreen}  : $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "  ${WHITE}Current Time        ${NC}${BIGreen}  : $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -207,19 +207,19 @@ echo -e "  ${WHITE}ISP-VPS             ${NC}${BIGreen}  : ${ISP}"
 echo -e "  ${WHITE}City                ${NC}${BIGreen}  : ${CITY}"
 echo -e "  ${WHITE}Ram                 ${NC}${BIGreen}  : ${uram}/${tram}GB"
 echo -e "  ${WHITE}CPU USAGE           ${NC}${BIGreen}  : ${cpu_usage}"
-echo -e "  ${WHITE}Clients Name        ${NC}${BIYellow} : $Name ${NC}"
-echo -e "  ${WHITE}Script Expired      ${NC}${BIYellow} : $Exp (${NC}${BIGreen} $dayleft Days ${NC}${BIYellow})${NC}"
-echo -e "  ${WHITE}Developer           ${NC}${BIYellow} : FV STORE TUNNELING${NC}"
+echo -e "  ${WHITE}Clients Name        ${NC}${BIYellow}  : $Name ${NC}"
+echo -e "  ${WHITE}Script Expired      ${NC}${BIYellow}  : $Exp (${NC}${BIGreen} $dayleft Days ${NC}${BIYellow})${NC}"
+echo -e "  ${WHITE}Developer           ${NC}${BIYellow}  : FV STORE TUNNELING${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}│${NC}${GARIS}                     << STATUS SERVICE >>                    ${NC}${CYAN}|${NC}"
+echo -e "${CYAN}│${NC}${GARIS}                     << STATUS SERVICE >>                   ${NC}${CYAN}|${NC}"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "      ${BIGreen}[ SSH Websocket${NC}: ${BIGreen}ON ${NC}]  [ NGINX${NC}: ${status_nginx} ] [ XRAY${NC} : ${status_xray} ] "
+echo -e "      ${BIGreen}[ SSH Websocket${NC}: ${BIGreen}ON ]  [ NGINX: ${status_nginx} ] [ X-RAY : ${status_xray} ] "
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${CYAN}│  \033[0m ${BOLD}${BIYellow}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $CYAN│"
 echo -e "${CYAN}│  \033[0m ${BIGreen} $ssh1        $vma           $vla          $tra               $ssa   $NC    $CYAN│"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}│${NC}${GARIS}                     << MENU TUNNELING >>                    ${NC}${CYAN}|${NC}"
+echo -e "${CYAN}│${NC}${GARIS}                     << MENU TUNNELING >>                   ${NC}${CYAN}|${NC}"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "  ${CYAN}[${NC}${WHITE}01${NC}${CYAN}]${NC}${Blue} SSH         ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}08${NC}${CYAN}]${NC}${Blue} BACKUP      ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
 echo -e "  ${CYAN}[${NC}${WHITE}02${NC}${CYAN}]${NC}${Blue} VMESS       ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}09${NC}${CYAN}]${NC}${Blue} SETTING     ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
@@ -230,7 +230,7 @@ echo -e "  ${CYAN}[${NC}${WHITE}06${NC}${CYAN}]${NC}${Blue} UPDATE      ${NC}${C
 echo -e "  ${CYAN}[${NC}${WHITE}07${NC}${CYAN}]${NC}${Blue} INSTALL UDP ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}14${NC}${CYAN}]${NC}${Blue} INSTALL BOT ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${WHITE}"
-echo -ne " Select menu : "; read opt
+echo -ne " Select menu << 1 - 14 >> : "; read opt
 case $opt in
 01 | 1) clear ; menu-ssh ;;
 02 | 2) clear ; menu-vmess ;;
