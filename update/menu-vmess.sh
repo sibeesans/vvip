@@ -164,8 +164,6 @@ none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ /
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 read -rp "   Input Username : " -e user
-read -p "   Owner     : " OWNER
-read -p "Input Id Grup (-1001911868043) : " CHATIDGC
       
 if [ -z $user ]; then
 echo -e " [Error] Username cannot be empty "
@@ -279,9 +277,9 @@ echo -e "$COLOR1 ${NC} Link GRPC : "
 echo -e "$COLOR1 ${NC} ${vmesslink3}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo ""
-###VTURBOTTRANSAKSINEXUPDATE
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
+# waduh
 }
 
 clear
