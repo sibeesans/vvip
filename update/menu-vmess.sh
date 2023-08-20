@@ -2,6 +2,7 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
+
 colornow=$(cat /etc/ssnvpn/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m" 
@@ -164,6 +165,7 @@ none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ /
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 read -rp "   Input Username : " -e user
+
       
 if [ -z $user ]; then
 echo -e " [Error] Username cannot be empty "
@@ -190,7 +192,6 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p " Limit User Quota " Quota
 read -p " Limit User ip " limit
 read -p " Expired (days): " masaaktif
-read -p "   Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmess$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
@@ -251,6 +252,8 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 END
+
+clear
 clear
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " ${COLBG1}        • CREATE VMESS USER •           ${NC} "
@@ -268,16 +271,16 @@ echo -e "$COLOR1 ${NC} alterId       : 0"
 echo -e "$COLOR1 ${NC} Security      : auto" 
 echo -e "$COLOR1 ${NC} Network       : ws" 
 echo -e "$COLOR1 ${NC} Path          : /vmess" 
-echo -e "$COLOR1 ${NC} Path Custom   : /multipath"
+echo -e "$COLOR1 ${NC} Path Custom   : /Multipart"
 echo -e "$COLOR1 ${NC} Path WSS      : wss://bug.com/vmess" 
 echo -e "$COLOR1 ${NC} ServiceName   : vmess-grpc" 
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo -e "$COLOR1 ${NC} Link TLS : "
 echo -e "$COLOR1 ${NC} ${vmesslink1}" 
-echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1 ${NC} Link none TLS : "
 echo -e "$COLOR1 ${NC} ${vmesslink2}" 
-echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
+echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1 ${NC} Link GRPC : "
 echo -e "$COLOR1 ${NC} ${vmesslink3}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
@@ -292,21 +295,20 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e " \e[1;97;101m          MENU MANAGER VMES           \E[0m"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;93m〔⎆〕 ${grenbo}1.${NC} \033[0;36mCreating a Vmess Account${NC}"
-echo -e "\033[1;93m〔⎆〕 ${grenbo}2.${NC} \033[0;36mRenew a Vmess Account${NC}"
-echo -e "\033[1;93m〔⎆〕 ${grenbo}3.${NC} \033[0;36mDelete Vmess Account${NC}"
-echo -e "\033[1;93m〔⎆〕 ${grenbo}4.${NC} \033[0;36mCheck Vmess Account${NC}"
+echo -e "\033[1;93m〔⎆〕 ${grenbo}2.${NC} \033[0;36mTrial a Vmess Account OFF${NC}"
+echo -e "\033[1;93m〔⎆〕 ${grenbo}3.${NC} \033[0;36mRenew a Vmess Account${NC}"
+echo -e "\033[1;93m〔⎆〕 ${grenbo}4.${NC} \033[0;36mDelete Vmess Account${NC}"
+echo -e "\033[1;93m〔⎆〕 ${grenbo}5.${NC} \033[0;36mCheck Vmess Account${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
-01 | 1) clear ; addvmess ;;
-02 | 2) clear ; renewvmess ;;
-03 | 3) clear ; delvmess ;;
-04 | 4) clear ; cekvmess ;;
-05 | 5) clear ; trialvmess ;;
+01 | 1) clear ; add-ws ;;
+02 | 2) clear ; trialvmess ;;
+02 | 3) clear ; renewvmess ;;
+03 | 4) clear ; delvmess ;;
+04 | 5) clear ; cekvmess ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vmess ;;
 esac
-
-       
