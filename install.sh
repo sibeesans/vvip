@@ -306,6 +306,9 @@ echo -e "$green[INFO]$NC Download Extra Menu" | lolcat
 sleep 2
 wget https://raw.githubusercontent.com/fv-store/vvip/main/update/update.sh && chmod +x update.sh && ./update.sh
 rm -f update.sh
+echo -e "$green[INFO]$NC INSTALL SLOWDNS"
+sleep 2
+wget https://raw.githubusercontent.com/Fv-store/vvip/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "            Install openvpn              | lolcat
