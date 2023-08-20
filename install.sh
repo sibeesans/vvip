@@ -308,7 +308,7 @@ wget https://raw.githubusercontent.com/fv-store/vvip/main/update/update.sh && ch
 rm -f update.sh
 echo -e "$green[INFO]$NC INSTALL SLOWDNS"
 sleep 2
-wget https://raw.githubusercontent.com/Fv-store/vvip/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+wget https://raw.githubusercontent.com/dragon-andy/VVIP/ipuk/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "            Install openvpn              | lolcat
