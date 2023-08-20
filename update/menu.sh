@@ -1,7 +1,7 @@
 #!/bin/bash
 # =========================================
-BOT="https://raw.githubusercontent.com/fv-store/vvip/main/"
-UPDATE="https://raw.githubusercontent.com/fv-store/vvip/main/update/update.sh"
+BOT="https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh"
+UPDATE="https://raw.githubusercontent.com/fv-store/vvip/main/update/"
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 GREEN='\033[0;32m'
 RED='\033[0;31m'
@@ -151,7 +151,7 @@ else
     status_ws="${RED}OFF${NC}"
 fi
 
-sshws_s="{GREEN}ON${NC}"
+sshws_s="${GREEN}ON${NC}"
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
@@ -221,13 +221,13 @@ echo -e "${CYAN}└────────────────────�
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${CYAN}│${NC}${GARIS}                     << MENU TUNNELING >>                   ${NC}${CYAN}|${NC}"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "  ${CYAN}[${NC}${WHITE}01${NC}${CYAN}]${NC}${Blue} SSH         ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}08${NC}${CYAN}]${NC}${Blue} BACKUP      ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
-echo -e "  ${CYAN}[${NC}${WHITE}02${NC}${CYAN}]${NC}${Blue} VMESS       ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}09${NC}${CYAN}]${NC}${Blue} SETTING     ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
-echo -e "  ${CYAN}[${NC}${WHITE}03${NC}${CYAN}]${NC}${Blue} VLESS       ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}10${NC}${CYAN}]${NC}${Blue} INFORMATION ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
-echo -e "  ${CYAN}[${NC}${WHITE}04${NC}${CYAN}]${NC}${Blue} TROJAN      ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}11${NC}${CYAN}]${NC}${Blue} ADD DOMAIN  ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
-echo -e "  ${CYAN}[${NC}${WHITE}05${NC}${CYAN}]${NC}${Blue} SSWS        ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}12${NC}${CYAN}]${NC}${Blue} CERT XRAY   ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
-echo -e "  ${CYAN}[${NC}${WHITE}06${NC}${CYAN}]${NC}${Blue} UPDATE      ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}13${NC}${CYAN}]${NC}${Blue} SET REBOOT  ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
-echo -e "  ${CYAN}[${NC}${WHITE}07${NC}${CYAN}]${NC}${Blue} INSTALL UDP ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}14${NC}${CYAN}]${NC}${Blue} INSTALL BOT ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
+echo -e "  ${CYAN}[${NC}${WHITE}01${NC}${CYAN}]${NC}${CYAN} SSH         ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}08${NC}${CYAN}]${NC}${CYAN} BACKUP      ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
+echo -e "  ${CYAN}[${NC}${WHITE}02${NC}${CYAN}]${NC}${CYAN} VMESS       ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}09${NC}${CYAN}]${NC}${CYAN} SETTING     ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
+echo -e "  ${CYAN}[${NC}${WHITE}03${NC}${CYAN}]${NC}${CYAN} VLESS       ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}10${NC}${CYAN}]${NC}${CYAN} INFORMATION ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
+echo -e "  ${CYAN}[${NC}${WHITE}04${NC}${CYAN}]${NC}${CYAN} TROJAN      ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}11${NC}${CYAN}]${NC}${CYAN} ADD DOMAIN  ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
+echo -e "  ${CYAN}[${NC}${WHITE}05${NC}${CYAN}]${NC}${CYAN} SSWS        ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}12${NC}${CYAN}]${NC}${CYAN} CERT XRAY   ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
+echo -e "  ${CYAN}[${NC}${WHITE}06${NC}${CYAN}]${NC}${CYAN} UPDATE      ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}13${NC}${CYAN}]${NC}${CYAN} SET REBOOT  ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
+echo -e "  ${CYAN}[${NC}${WHITE}07${NC}${CYAN}]${NC}${CYAN} INSTALL UDP ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}      ${CYAN}[${NC}${WHITE}14${NC}${CYAN}]${NC}${CYAN} INSTALL BOT ${NC}${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC} "
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${WHITE}"
 echo -ne " Select menu << 1 - 14 >> : "; read opt
@@ -237,7 +237,7 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; wget ${UPDATE} && chmod +x update.sh && ./update.sh ;;
+06 | 6) clear ; wget ${UPDATE}update.sh && chmod +x update.sh && ./update.sh ;;
 07 | 7) clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 08 | 8) clear ; menu-backup ;;
 09 | 9) clear ; menu-set ;;
@@ -245,7 +245,7 @@ case $opt in
 11) clear ; add-host ;;
 12) clear ; crtxray ;;
 13) clear ; auto-reboot ;;
-14) clear ; wget ${BOT}kontol.sh && chmod +x kontol.sh && ./kontol.sh ;;
+14) clear ; wget ${BOT} && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 999) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;
