@@ -2,11 +2,6 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-AKUN="AKUN VMESS"
-TIMES="10"
-CHATID=""
-KEY=""
-URL="https://api.telegram.org/bot$KEY/sendMessage"
 colornow=$(cat /etc/ssnvpn/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m" 
@@ -255,20 +250,6 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 END
-TRX="
-<code>INFO MASKU -Transaksi</code>
-<code>────────────────────</code>
-<b>  ⚠️TRANSAKSI VMESS WS⚠️      </b>
-<code>────────────────────</code>
-<code>🌟Owner   : $OWNER</code>
-<code>🌟Detail  : $AKUN</code>
-<code>🌟Durasi  : $exp</code>
-<code>🌟Server  : $domain</code>
-<code>────────────────────</code>
-<i>Notifikasi Via RstoreBOT</i>
-<b>Tele : @kytxz</b>
-"
-curl -s --max-time $TIMES -d "chat_id=$CHATIDGC&disable_web_page_preview=1&text=$TRX&parse_mode=html" $URL
 clear
 clear
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
