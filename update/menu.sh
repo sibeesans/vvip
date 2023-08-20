@@ -203,6 +203,7 @@ echo -e "  ${WHITE}Sever Uptime        ${NC}${BIGreen}  : $( uptime -p  | cut -d
 echo -e "  ${WHITE}Current Time        ${NC}${BIGreen}  : $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "  ${WHITE}Operating System    ${NC}${BIGreen}  : $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g')( $(uname -m))"
 echo -e "  ${WHITE}Domain VPS          ${NC}${BIGreen}  : $( cat /etc/xray/domain )"
+echo -e "  ${WHITE}Slow DNS Domain     ${NC}${BIGreen}  : $( cat /etc/xray/dns )"
 echo -e "  ${WHITE}Server IP           ${NC}${BIGreen}  : ${ipsaya}"
 echo -e "  ${WHITE}ISP & CITY          ${NC}${BIGreen}  : ${ISP}"" & ${CITY}"
 echo -e "  ${WHITE}Ram                 ${NC}${BIGreen}  : ${uram} / ${tram}GB"
