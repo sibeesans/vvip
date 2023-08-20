@@ -213,7 +213,7 @@ echo -e "  ${WHITE}Developer           ${NC}${BIYellow}  : FV STORE TUNNELING${N
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${CYAN}│${NC}${GARIS}                     << STATUS SERVICE >>                   ${NC}${CYAN}|${NC}"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "      ${BIGreen}[ SSH Websocket${NC}: ${BIGreen}ON ]  [ NGINX: ${status_nginx} ] [ X-RAY : ${status_xray} ] "
+echo -e "      ${BIGreen}[ SSH Websocket: ${status_ws} ]  ${BIGreen}[ NGINX: ${status_nginx} ] ${BIGreen}[ X-RAY : ${status_xray} ] "
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${CYAN}│  \033[0m ${BOLD}${BIYellow}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $CYAN│"
 echo -e "${CYAN}│  \033[0m ${BIGreen} $ssh1        $vma           $vla          $tra               $ssa   $NC    $CYAN│"
