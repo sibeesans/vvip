@@ -2,11 +2,6 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-AKUN="AKUN SSH"
-TIMES="10"
-CHATID="5548605787"
-KEY="6405908979:AAHFsGsHd88eYNb5qYX1w3mVEs3gTncS3ws"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
 colornow=$(cat /etc/ssnvpn/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m" 
@@ -80,21 +75,7 @@ echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu-ssh
 fi
-#####BOT-TRX
-END
-<☘️🔥TRX="
-<code>INFO MASKU -Transaksi</code>
-<code>────────────────────</code>
-<b>  ⚠️TRANSAKSI SSH OVPN⚠️      </b>
-<code>────────────────────</code>
-<code>🌟Detail  : $AKUN</code>
-<code>🌟Durasi  : $exp</code>
-<code>🌟Server  : $domen</code>
-<code>────────────────────</code>
-<i>Notifikasi Via FvStoreBOT</i>
-<b>Tele : @fdlyvpn_ID</b>
-"
-curl -s --max-time $TIMES -d "chat_id=$CHATIDGC&disable_web_page_preview=1&text=$TRX&parse_mode=html" $URL
+#####
 clear
 ###########
 IP=$(curl -sS ifconfig.me);
@@ -212,7 +193,7 @@ function start() {
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " ${COLBG1}            • WEBSOCKET MENU •          ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
-wget -q -O /usr/bin/ssh-wsenabler "https://raw.githubusercontent.com/myridwan/VVIP/ipuk/ssh/sshws-true.sh" && chmod +x /usr/bin/ssh-wsenabler
+wget -q -O /usr/bin/ssh-wsenabler "https://raw.githubusercontent.com/Fv-store/vvip/main/ssh/sshws-true.sh" && chmod +x /usr/bin/ssh-wsenabler
 systemctl daemon-reload >/dev/null 2>&1
 systemctl enable sshws.service >/dev/null 2>&1
 systemctl start sshws.service >/dev/null 2>&1
