@@ -4,6 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 CDNF="https://raw.githubusercontent.com/fv-store/vvip/main"
 REPO="https://raw.githubusercontent.com/myridwan/scriptvps/ipuk/"
+UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2" 
 dom=$( cat /etc/xray/domain )
 ISP=$(wget -qO- ipinfo.io/org)
 CITY=$(curl -s ipinfo.io/city)
@@ -283,35 +284,41 @@ blue
 EOF
     
 #install ssh ovpn
-echo -e "$green[INFO]$NC Install SSH"
+echo -e "$green[INFO]$NC Install SSH" | lolcat
 sleep 2
 clear
 wget https://raw.githubusercontent.com/fv-store/vvip/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
-echo -e "$green[INFO]$NC Install XRAY!"
+echo -e "$green[INFO]$NC Install XRAY!" | lolcat
 sleep 2
 clear
 wget https://raw.githubusercontent.com/fv-store/vvip/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
-echo -e "$green[INFO]$NC Install SET-BR!"
+echo -e "$green[INFO]$NC Install SET-BR!" | lolcat
 wget https://raw.githubusercontent.com/fv-store/vvip/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
-echo -e "$green[INFO]$NC Install WEBSOCKET!"
+echo -e "$green[INFO]$NC Install WEBSOCKET!" | lolcat
 wget https://raw.githubusercontent.com/fv-store/vvip/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 wget https://raw.githubusercontent.com/fv-store/vvip/main/websocket/nontls.sh && chmod +x nontls.sh && ./nontls.sh
 clear
-echo -e "$green[INFO]$NC Download Extra Menu"
+echo -e "$green[INFO]$NC Download Extra Menu" | lolcat
 sleep 2
 wget https://raw.githubusercontent.com/fv-store/vvip/main/update/update.sh && chmod +x update.sh && ./update.sh
 rm -f update.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install openvpn              $NC"
+echo -e "            Install openvpn              | lolcat
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 wget -q -O vpn.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh && chmod 777 vpn.sh && ./vpn.sh
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+clear 
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "            Install UDP custom            | lolcat
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
