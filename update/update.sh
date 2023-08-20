@@ -4,10 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e " [INFO] Downloading Update File"
 sleep 2
-make dir 
-/etc/security/limits.conf
 
-*                hard    maxlogins       2
 touch /etc/security/limits.conf
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/fv-store/vvip/main/update/menu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/fv-store/vvip/main/update/menu-ss.sh" && chmod +x /usr/bin/menu-ss
