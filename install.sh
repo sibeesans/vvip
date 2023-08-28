@@ -212,7 +212,7 @@ fi
     chmod +x /tmp/bbr.sh && bash /tmp/bbr.sh
 
 echo ""
-wget -q https://raw.githubusercontent.com/fv-store/vvip/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
+wget -q https://raw.githubusercontent.com/sibeesans/vvip/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
 rm dependencies.sh
 clear
 
@@ -287,24 +287,24 @@ EOF
 echo -e "$green[INFO]$NC Install SSH" | lolcat
 sleep 2
 clear
-wget https://raw.githubusercontent.com/fv-store/vvip/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/sibeesans/vvip/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "$green[INFO]$NC Install XRAY!" | lolcat
 sleep 2
 clear
-wget https://raw.githubusercontent.com/fv-store/vvip/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/sibeesans/vvip/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 echo -e "$green[INFO]$NC Install SET-BR!" | lolcat
-wget https://raw.githubusercontent.com/fv-store/vvip/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/sibeesans/vvip/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 echo -e "$green[INFO]$NC Install WEBSOCKET!" | lolcat
-wget https://raw.githubusercontent.com/fv-store/vvip/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/sibeesans/vvip/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-wget https://raw.githubusercontent.com/fv-store/vvip/main/websocket/nontls.sh && chmod +x nontls.sh && ./nontls.sh
+wget https://raw.githubusercontent.com/sibeesans/vvip/main/websocket/nontls.sh && chmod +x nontls.sh && ./nontls.sh
 clear
 echo -e "$green[INFO]$NC Download Extra Menu" | lolcat
 sleep 2
-wget https://raw.githubusercontent.com/fv-store/vvip/main/update/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/sibeesans/vvip/main/update/update.sh && chmod +x update.sh && ./update.sh
 rm -f update.sh
 echo -e "$green[INFO]$NC INSTALL SLOWDNS"
 sleep 2
